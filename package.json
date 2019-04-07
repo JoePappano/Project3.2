@@ -1,0 +1,61 @@
+{
+  "name": "proj3",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "materialize-css": "^1.0.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-axios": "^2.0.3",
+    "react-dom": "^16.8.4",
+    "react-materialize": "^2.6.0",
+    "react-parallax": "^2.2.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "sequelize": "^5.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katevk1/proj3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katevk1/proj3/issues"
+  },
+  "homepage": "https://github.com/katevk1/proj3#readme",
+  "devDependencies": {}
+}

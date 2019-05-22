@@ -23,13 +23,21 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'root',
-        database: 'youtilitydb'
-    })
+        host: 'l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        port: 3306,
+        user: 'pk9gqrj7s7qvwc9r',
+        password: 'fedkqfeka73chrio',
+        database: 'onc3ilniz1id5wwi',
+        use_env_variable: "JAWSDB_URL",
+        dialect: "mysql"
+    });
 }
 
 // sequelize.connect();
-connection.connect();
+connection.connect(function(err) {
+    if (err){
+        console.log("Error connecting: " + err.stack);
+    }
+        console.log("connected as id " + connection.threadId);
+});
 module.exports = connection;

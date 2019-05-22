@@ -11,13 +11,13 @@ export class SignIn extends Component {
           <form action="/login" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="Email" name="email" id="textarea1" class="materialize-textarea" />
+                    <input placeholder="Email" name="email" id="textarea1" className="materialize-textarea" />
                     {/* <label for="textarea1">Email</label> */}
                 </div>
             </div>
             <div className="row">
                 <div class="input-field col s6">
-                    <input placeholder="Password" name="password" type="password" id="textarea1" class="materialize-textarea" />
+                    <input placeholder="Password" name="password" type="password" className="materialize-textarea" />
                     {/* <label for="textarea1">Password</label> */}
                 </div>
             </div>

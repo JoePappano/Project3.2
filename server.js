@@ -34,7 +34,7 @@ var db = require("./models");
 app.use(session({
   secret: "secret",
   resave: true,
-  saveUnitialized: true
+  saveUnitialized: true,
 }));
 
 //passport middleware

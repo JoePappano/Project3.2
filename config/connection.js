@@ -32,4 +32,4 @@ if (process.env.JAWSDB_URL) {
 
 // sequelize.connect();
 connection.connect();
-module.exports = sequelize;
+module.exports = connection;

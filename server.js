@@ -63,7 +63,7 @@ if (process.env.NODE_ENV === "test") {
 
 
 //Starting server  
-db.sequelize.sync({ force: true }).then(function(){
+db.sequelize.sync({force: true}).then(function(){
     app.listen(PORT, function() {
       console.log("========================")
         console.log(

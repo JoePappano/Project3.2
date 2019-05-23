@@ -11,7 +11,7 @@ app.get("/all", function(req, res) {
     });
   });
 
-app.post("/newListing", function(req, res) {
+app.post("/newListing", function(req, res) { 
 
     db.Listing.create({
         User: req.body.userName,
@@ -28,9 +28,9 @@ app.post("/newListing", function(req, res) {
 
   app.post("/newProvider", function(req, res) {
     db.Provider.create({
-      companyName: req.body.companyName,
-      email: req.body.companyEmail,
-      servicesProvided: req.body.servicesProvided
+      companyName: "bob",
+      email: "abc company",
+      servicesProvided: "lawncare"
     }).then(function(results) {
       res.redirect("/")
     })

@@ -45,7 +45,7 @@
     "not op_mini all"
   ],
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "server.js",
+  "main": "controller/apiRoutes.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/katevk1/proj3.git"

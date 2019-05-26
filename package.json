@@ -38,6 +38,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "https//:localhost:5000/",
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -45,7 +46,7 @@
     "not op_mini all"
   ],
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "controller/apiRoutes.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/katevk1/proj3.git"

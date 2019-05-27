@@ -16,7 +16,7 @@ if (process.env.JAWSDB_URL) {
     // port: 8889,  
     host: "localhost",
     dialect: "mysql",
-});
+    });
 };
 
 // if (process.env.JAWSDB_URL) {

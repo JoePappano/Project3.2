@@ -5,6 +5,7 @@ var Sequelize = require("sequelize");
 var flash = require("connect-flash");
 var session = require("express-session")
 var passport = require("passport");
+var path = require('path');
 
 
 
@@ -19,7 +20,23 @@ var PORT = process.env.PORT || 3001;
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("./client/public/"));
+
+//Static file declaration
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+//production mode
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  //
+  app.get('*', (req, res) => {
+    res.sendfile(path.join(__dirname = 'client/build/index.html'));
+  })
+}
+//build mode
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/public/index.html'));
+})
+
 app.set("view engine", "ejs");
 
 //Passport Middleware

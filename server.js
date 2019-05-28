@@ -23,15 +23,15 @@ app.use(express.json());
 
 //Static file declaration
 // app.use(express.static('public'))
-app.use(express.static("./client/public/"));
+app.use(express.static("./Project3.2/public/"));
 
 //production mode
 if(process.env.NODE_ENV === 'production') {
   // app.use(express.static("./client/public/"));
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(__dirname, 'Project3.2/build')));
   //
   app.get('*', (req, res) => {
-    res.sendfile(path.join('client/public/index.html'));
+    res.sendfile(path.join('Project3.2/public/index.html'));
   })
 }
 // //build mode

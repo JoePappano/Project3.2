@@ -31,7 +31,7 @@ if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'Project3.2/build')));
   //
   app.get('*', (req, res) => {
-    res.sendfile(path.join('Project3.2/public/index.html'));
+    res.sendfile(path.join(__dirname = 'Project3.2/public/index.html'));
   })
 }
 // //build mode

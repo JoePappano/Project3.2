@@ -6,7 +6,7 @@ var flash = require("connect-flash");
 var session = require("express-session")
 var passport = require("passport");
 var path = require('path');
-var morgan = require('morgan');
+// var morgan = require('morgan');
 
 
 
@@ -21,7 +21,7 @@ var PORT = process.env.PORT || 3001;
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(morgan('common'))
+// app.use(morgan('common'))
 
 //Static file declaration
 // app.use(express.static("./client/public/"));
@@ -69,7 +69,7 @@ if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
   //
   app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname = 'client/build/index.html'));
+    res.sendfile(path.join(__dirname = 'build/index.html'));
   })
 }
 //build mode

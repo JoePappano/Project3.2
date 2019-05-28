@@ -25,21 +25,7 @@ app.use(express.json());
 // app.use(express.static("./client/public/"));
 // app.use(express.static('public'))
 
-app.use(express.static("./client/public/"));
 
-//production mode
-if(process.env.NODE_ENV === 'production') {
-  app.use(express.static("client/build"));
-  // app.use(express.static(path.join(__dirname, 'client/build')));
-  //
-  app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname = 'client/build/index.html'));
-  })
-}
-// //build mode
-app.get('*', (req, res) => {
-  res.sendFile(path.join('/client/public/index.html'));
-})
 
 app.set("view engine", "ejs");
 
@@ -72,6 +58,24 @@ app.use(flash());
 //Routes aka Controller
 require("./controller/apiRoutes")(app);
 // require("./config/connection")(app);
+
+//Static declaration
+app.use(express.static("./client/public/"));
+
+//production mode
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static("client/build"));
+  // app.use(express.static(path.join(__dirname, 'client/build')));
+  //
+  app.get('*', (req, res) => {
+    res.sendfile(path.join(__dirname = 'client/build/index.html'));
+  })
+}
+// //build mode
+app.get('*', (req, res) => {
+  res.sendFile(path.join('/client/public/index.html'));
+})
+
 
 
 var syncOptions = { force: false };

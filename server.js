@@ -27,11 +27,12 @@ app.use(express.static("./client/public/"));
 
 //production mode
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-  //
-  app.get('*', (req, res) => {
-    res.sendfile(path.join('client/public/index.html'));
-  })
+  app.use(express.static("./client/public/"));
+  // app.use(express.static(path.join(__dirname, 'client/build')));
+  // //
+  // app.get('*', (req, res) => {
+  //   res.sendfile(path.join('client/public/index.html'));
+  // })
 }
 // //build mode
 // app.get('*', (req, res) => {

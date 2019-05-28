@@ -14,6 +14,19 @@ import './parallax-template/css/materialize.min.css'
 import './parallax-template/css/style.css'
 
 function App(){
+    constructor(props) {
+        super(props);
+        this.state = {}
+        this.connecToServer = this.connecToServer.bind(this);
+      }
+      connecToServer() {
+        fetch('/');
+      }
+    
+      componentDidMount() {
+        this.connecToServer();
+      }
+
     return(
         <div id="app-container">
             <BrowserRouter>

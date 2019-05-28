@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react';
 import Navigate from "./components/Navigate";
 import FootComp from "./components/FootComp";
 import Jumbotron from "./components/Jumbotron";
@@ -13,21 +13,47 @@ import './parallax-template/css/materialize.css'
 import './parallax-template/css/materialize.min.css'
 import './parallax-template/css/style.css'
 
-function App(){
-    constructor(props) {
-        super(props);
-        this.state = {}
-        this.connecToServer = this.connecToServer.bind(this);
-      }
-      connecToServer() {
-        fetch('/');
-      }
-    
-      componentDidMount() {
-        this.connecToServer();
-      }
 
-    return(
+// function App(){
+//     return(
+//         <div id="app-container">
+//             <BrowserRouter>
+//                 <div>
+//                     <Navigate/>
+//                     <Switch>
+//                         <Route path="/" component={Jumbotron} exact/>
+//                         <Route path="/signIn" component={SignIn} />
+//                         <Route path="/createListing" component={CreateListing} />
+//                         <Route path="/createProviderAccount" component={BecomeAProvider} />
+//                         <Route path="/createUser" component={NewUser} />
+//                         <Route path="/listingsTable" component={ListingsTable} />
+//                         <Route path="/errors" component={Errors} />
+//                         {/* <Route path="/createAccount" component={createAccount} /> */}
+//                     </Switch>
+//                     <FootComp/>
+//                 </div>
+//             </BrowserRouter>
+            
+//         </div>
+//     )
+// }
+// export default App
+
+class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {}
+      this.connecToServer = this.connecToServer.bind(this);
+    }
+    connecToServer() {
+      fetch('/');
+    }
+  
+    componentDidMount() {
+      this.connecToServer();
+    }
+    render() {
+      return (
         <div id="app-container">
             <BrowserRouter>
                 <div>
@@ -47,6 +73,7 @@ function App(){
             </BrowserRouter>
             
         </div>
-    )
-}
-export default App
+      );
+    }
+  }
+  export default App;

@@ -22,7 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //Static file declaration
-app.use(express.static(path.join(__dirname, '/public/')));
+app.use(express.static('public'))
+// app.use(express.static(path.join(__dirname, '/public/')));
 
 //production mode
 // if(process.env.NODE_ENV === 'production') {

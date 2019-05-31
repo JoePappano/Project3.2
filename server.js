@@ -61,7 +61,7 @@ app.use(flash());
 require("./controller/apiRoutes")(app);
 // require("./config/connection")(app);
 
-app.use(express.static("./client/public/"));
+app.use(express.static("./client/build/"));
 
 // //Static file declaration
 // app.use('/static', express.static(path.join(__dirname, 'build')));

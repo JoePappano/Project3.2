@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "node server.js",
+    "start": "react-scripts start",
     "server": "nodemon server.js",
     "client": "npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -50,18 +50,18 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "MERN stack applicaiton",
   "main": "server.js",
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/katevk1/proj3.git"
+    "url": "git+https://github.com/JoePappano/Project3.2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/katevk1/proj3/issues"
+    "url": "https://github.com/JoePappano/Project3.2/issues"
   },
-  "homepage": "https://github.com/katevk1/proj3#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/JoePappano/Project3.2#readme"
 }

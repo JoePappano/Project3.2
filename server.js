@@ -61,21 +61,23 @@ app.use(flash());
 require("./controller/apiRoutes")(app);
 // require("./config/connection")(app);
 
-//Static file declaration
-app.use('/static', express.static(path.join(__dirname, 'build')));
+app.use(express.static("./client/public/"));
 
-//production mode
-if(process.env.NODE_ENV === 'production') {
-  app.use('/static', express.static(path.join(__dirname, 'build')));
-  //
-  app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname, "build", 'index.html'));
-  })
-}
-//build mode
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/public/index.html'));
-})
+// //Static file declaration
+// app.use('/static', express.static(path.join(__dirname, 'build')));
+
+// //production mode
+// if(process.env.NODE_ENV === 'production') {
+//   app.use('/static', express.static(path.join(__dirname, 'build')));
+//   //
+//   app.get('*', (req, res) => {
+//     res.sendfile(path.join(__dirname, "build", 'index.html'));
+//   })
+// }
+// //build mode
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname+'/client/public/index.html'));
+// })
 
 
 

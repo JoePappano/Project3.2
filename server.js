@@ -19,10 +19,10 @@ var app = express();
 //production mode
 if(process.env.NODE_ENV === 'production') {
   // app.use('/static', express.static(path.join(__dirname, 'build')));
-  app.use(express.static("./Project3.2/build/"));
+  app.use(express.static(path.join(__dirname, "/build")));
   //
   app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname, "build", 'index.html'));
+    res.sendfile(path.join(__dirname + "/build/index.html"));
   })
 }
 // //build mode

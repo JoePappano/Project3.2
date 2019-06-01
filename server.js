@@ -13,6 +13,24 @@ var path = require('path');
 var app = express();
 
 
+// //Static file declaration
+// app.use('/static', express.static(path.join(__dirname, 'build')));
+
+//production mode
+if(process.env.NODE_ENV === 'production') {
+  // app.use('/static', express.static(path.join(__dirname, 'build')));
+  app.use(express.static("./Project3.2/build/"));
+  //
+  app.get('*', (req, res) => {
+    res.sendfile(path.join(__dirname, "build", 'index.html'));
+  })
+}
+// //build mode
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname+'/Project3.2/build/index.html'));
+// })
+
+
 
 var PORT = process.env.PORT || 3001;
 
@@ -62,24 +80,6 @@ require("./controller/apiRoutes")(app);
 // require("./config/connection")(app);
 
 // app.use(express.static("./client/build/"));
-
-//Static file declaration
-app.use('/static', express.static(path.join(__dirname, 'build')));
-
-//production mode
-if(process.env.NODE_ENV === 'production') {
-  // app.use('/static', express.static(path.join(__dirname, 'build')));
-  app.use(express.static("./Project3.2/build/"));
-  //
-  app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname, "build", 'index.html'));
-  })
-}
-//build mode
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/Project3.2/build/index.html'));
-})
-
 
 
 var syncOptions = { force: false };

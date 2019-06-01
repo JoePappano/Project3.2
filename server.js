@@ -69,10 +69,10 @@ require("./controller/apiRoutes")(app);
 //production mode
 if(process.env.NODE_ENV === 'production') {
   // app.use('/static', express.static(path.join(__dirname, 'build')));
-  app.use(express.static('client/build'));
+  app.use(express.static('build'));
   //
   app.get('*', (req, res) => {
-    res.sendfile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendfile(path.resolve(__dirname, "build", "index.html"));
   })
 }
 // //build mode
